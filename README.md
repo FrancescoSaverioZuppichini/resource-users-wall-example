@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+An Example for [Flue](https://github.com/FrancescoSaverioZuppichini/Flue) and [Resource](https://github.com/FrancescoSaverioZuppichini/Resource)
+
 ## Build Setup
 
 ``` bash
