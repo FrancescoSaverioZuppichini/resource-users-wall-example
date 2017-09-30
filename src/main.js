@@ -5,17 +5,17 @@ import App from './App'
 
 import UIkit from 'uikit';
 
-import {SuperStore,flueVue} from 'flue-vue'
+import {flue} from 'flue-vue'
 
 import logger from 'redux-logger'
 
 import UserStore from './stores/UserStore.js'
 
-Vue.use(flueVue)
+Vue.use(flue)
 
-SuperStore.addStores([UserStore])
+flue.addStores([UserStore])
 
-SuperStore.applyMiddleware(UserStore,[logger])
+flue.applyGlobalMiddleware([logger])
 
 Vue.config.productionTip = false
 

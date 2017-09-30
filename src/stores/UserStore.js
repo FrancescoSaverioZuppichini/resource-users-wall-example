@@ -4,12 +4,9 @@ import axios from 'axios'
 import Vue from 'vue'
 
 class UserStore extends Store {
-  constructor() {
-    super()
-    this.state.users = new Resource()
-  }
 
   onGetUsersSuccess({data}) {
+
     this.state.users.fromArray(data.results, 'email')
   }
 
@@ -45,5 +42,5 @@ class UserStore extends Store {
   }
 }
 
-const userStore = new UserStore()
+const userStore = new UserStore({ users : new Resource() })
 export default userStore
